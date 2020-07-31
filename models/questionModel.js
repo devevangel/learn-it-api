@@ -20,17 +20,18 @@ const questionSchema = new mongoose.Schema({
     trim: true
   },
   answerImage: String,
-  year: {
+  level: {
     type: String,
-    default: '1',
+    default: '100',
     enum: {
-      values: ['1', '2', '3', '4', '5'],
-      message: 'Year is either: 1, 2, 3, 4, 5'
+      values: ['100', '200', '300', '400', '500'],
+      message: 'Year is either: 100, 200, 300, 400, 500'
     }
   },
   subject: {
     type: String,
     trim: true,
+    lowercase: true,
     required: [
       true,
       'A question must have a subject it falls under e.g Mathematics 111'
@@ -41,8 +42,9 @@ const questionSchema = new mongoose.Schema({
   topic: {
     type: String,
     trim: true,
+    lowercase: true,
     required: [true, 'A question must have a topic it falls under e.g algebra'],
-    maxlength: [20, 'A topic must have 20 characters or less'],
+    maxlength: [35, 'A topic must have 20 characters or less'],
     minlength: [4, 'A topic must have 4 characters or more']
   },
   explanation: {

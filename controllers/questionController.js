@@ -3,18 +3,32 @@ const APIFeatures = require('./../utils/apiFeatures');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 
-// exports.tester = async (req, res) => {
-//   console.log(typeof req.query.id);
-//   let queryString = JSON.stringify(req.query.id);
-//   queryString = queryString.replace(/\s+/g, '');
-//   queryString = JSON.parse(queryString);
-//   const _ids = queryString.split(',');
-//   console.log(_ids);
-//   const item = await Tour.find({
-//     _id: _ids
-//   });
-//   res.send(item);
-// };
+// needed => { _id: { $in: ['5f242994f740932678827b11', '5f242994f740932678827b19'] } }
+// so far => { _id: { '$in': [ '5f242994f740932678827b11', '5f242994f740932678827b19']} }
+exports.getQuestionsByIds = catchAsync(async (req, res) => {
+  const queryObj = { ...req.query };
+
+  let queryStr = JSON.stringify(queryObj);
+  queryStr = queryStr.replace(/\s+/g, '');
+  queryStr = queryStr.replace(/\b(in)\b/g, match => `$${match}`);
+
+  let builtQuery = JSON.parse(queryStr);
+
+  let ids = builtQuery._id.$in;
+  ids = ids.split(',');
+
+  builtQuery._id.$in = ids;
+
+  const questions = await Question.find(builtQuery);
+
+  res.status(200).json({
+    status: 'success',
+    results: questions.length,
+    data: {
+      questions
+    }
+  });
+});
 
 exports.getAllQuestions = catchAsync(async (req, res, next) => {
   //EXECUTE QUERY

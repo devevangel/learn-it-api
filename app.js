@@ -41,7 +41,19 @@ app.use(mongoSanitize());
 app.use(xss());
 
 //Prevent parameter pollution
-app.use(hpp());
+app.use(
+  hpp({
+    whitelist: [
+      'question',
+      'options',
+      'answer',
+      'level',
+      'subject',
+      'topic',
+      'explanation'
+    ]
+  })
+);
 
 // Serving static files
 // app.use(express.static(`${__dirname}/public`));

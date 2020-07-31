@@ -4,6 +4,8 @@ const authController = require('../controllers/authController');
 
 const router = express.Router();
 
+router.get('/tester', questionController.getQuestionsByIds);
+
 router
   .route('/')
   .get(authController.protect, questionController.getAllQuestions)

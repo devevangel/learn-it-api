@@ -15,7 +15,7 @@ mongoose
   .then(() => console.log('Connection to db established'));
 
 const questions = JSON.parse(
-  fs.readFileSync(`${__dirname}/questions.json`, 'utf-8')
+  fs.readFileSync(`${__dirname}/questions-simple.json`, 'utf-8')
 );
 
 const importData = async () => {
