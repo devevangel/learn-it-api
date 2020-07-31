@@ -40,10 +40,10 @@ const userSchema = new mongoose.Schema({
     maxlength: [20, 'A course must have 20 characters or less']
   },
   year: {
-    type: Number,
-    default: 1,
+    type: String,
+    default: '1',
     enum: {
-      values: [1, 2, 3, 4, 5],
+      values: ['1', '2', '3', '4', '5'],
       message: 'Year is either: 1, 2, 3, 4, 5'
     }
   },

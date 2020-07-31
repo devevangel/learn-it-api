@@ -6,17 +6,17 @@ const router = express.Router();
 
 router
   .route('/')
-  .get(authController.protect, questionController.getAllTours)
-  .post(questionController.createTour);
+  .get(authController.protect, questionController.getAllQuestions)
+  .post(questionController.getQuestion);
 
 router
   .route('/:id')
-  .get(questionController.getTour)
-  .patch(questionController.updateTour)
+  .get(questionController.getQuestion)
+  .patch(questionController.updateQuestion)
   .delete(
     authController.protect,
-    authController.restrictTo('admin', 'lead-guide'),
-    questionController.deleteTour
+    authController.restrictTo('admin', 'tutor'),
+    questionController.deleteQuestion
   );
 
 module.exports = router;
