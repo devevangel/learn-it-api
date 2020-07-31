@@ -56,3 +56,7 @@ const questionSchema = new mongoose.Schema({
     select: false
   }
 });
+
+const Question = mongoose.model('Question', questionSchema);
+
+module.exports = Question;
