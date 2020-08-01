@@ -12,8 +12,16 @@ const signToken = id => {
   });
 };
 
+const signRefreshToken = id => {
+  return jwt.sign({ id }, process.env.JWT_SECRET_REFRESH, {
+    expiresIn: process.env.JWT_EXPIRES_IN
+  });
+};
+
 const createSendToken = (user, statusCode, res) => {
   const token = signToken(user._id);
+
+  // Cookie options
   const cookieOptions = {
     expires: new Date(
       Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
@@ -43,8 +51,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     email: req.body.email,
     password: req.body.password,
     passwordConfirm: req.body.passwordConfirm,
-    passwordChangedAt: req.body.passwordChangedAt,
-    role: req.body.role
+    passwordChangedAt: req.body.passwordChangedAt
   });
 
   // 2) Log user in

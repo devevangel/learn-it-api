@@ -10,7 +10,7 @@ exports.getQuestionsByIds = catchAsync(async (req, res) => {
 
   let queryStr = JSON.stringify(queryObj);
   queryStr = queryStr.replace(/\s+/g, '');
-  queryStr = queryStr.replace(/\b(in)\b/g, match => `$${match}`);
+  queryStr = queryStr.trim().replace(/\b(in)\b/g, match => `$${match}`);
 
   let builtQuery = JSON.parse(queryStr);
 
@@ -30,13 +30,14 @@ exports.getQuestionsByIds = catchAsync(async (req, res) => {
   });
 });
 
-exports.getAllQuestions = catchAsync(async (req, res, next) => {
+// Get questions based on subject e.g math111 topic e.g algebra limit e.g 40 questions
+exports.getQuestions = catchAsync(async (req, res, next) => {
   //EXECUTE QUERY
-  const features = new APIFeatures(Question.find(), req.query)
+  const features = new APIFeatures(Question.aggregate(), req.query)
     .filter()
+    .limit()
     .sort()
-    .limitFields()
-    .paginate();
+    .limitFields();
   const questions = await features.query;
 
   // SEND RESPONSE
@@ -49,6 +50,7 @@ exports.getAllQuestions = catchAsync(async (req, res, next) => {
   });
 });
 
+// Get a single question
 exports.getQuestion = catchAsync(async (req, res, next) => {
   const question = await Question.findById(req.params.id);
   if (!question) {
@@ -64,6 +66,7 @@ exports.getQuestion = catchAsync(async (req, res, next) => {
   });
 });
 
+// Create a new Question
 exports.createQuestion = catchAsync(async (req, res, next) => {
   const newQuestion = await Question.create(req.body);
   res.status(201).json({
@@ -74,6 +77,7 @@ exports.createQuestion = catchAsync(async (req, res, next) => {
   });
 });
 
+// Update an exisiting questions
 exports.updateQuestion = catchAsync(async (req, res, next) => {
   const question = await Question.findByIdAndUpdate(req.params.id, req.body, {
     new: true,

@@ -4,12 +4,12 @@ const authController = require('../controllers/authController');
 
 const router = express.Router();
 
-router.get('/tester', questionController.getQuestionsByIds);
+router.get('/getQuestionsByIds', questionController.getQuestionsByIds);
 
 router
   .route('/')
-  .get(authController.protect, questionController.getAllQuestions)
-  .post(questionController.getQuestion);
+  .get(authController.protect, questionController.getQuestions)
+  .post(questionController.createQuestion);
 
 router
   .route('/:id')
@@ -17,7 +17,7 @@ router
   .patch(questionController.updateQuestion)
   .delete(
     authController.protect,
-    authController.restrictTo('admin', 'tutor'),
+    authController.restrictTo('admin'),
     questionController.deleteQuestion
   );
 

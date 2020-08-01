@@ -65,7 +65,7 @@ module.exports = (err, req, res, next) => {
     } else if (error.code === 11000) {
       error = handleDuplicateFieldsDB(error);
       sendErrorProd(error, res);
-    } else if (error._message === 'Validation failed') {
+    } else if (error._message.includes('validation failed')) {
       error = handleValidationErrorDB(error);
       sendErrorProd(error, res);
     } else if (error.name === 'JsonWebTokenError') {

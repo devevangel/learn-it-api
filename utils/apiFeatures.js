@@ -9,29 +9,39 @@ class APIFeatures {
     const exculdedFields = ['page', 'sort', 'limit', 'fields'];
     exculdedFields.forEach(el => delete queryObj[el]);
     let queryStr = JSON.stringify(queryObj);
-    queryStr = queryStr.replace(/\s+/g, '');
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
-    this.query = this.query.find(JSON.parse(queryStr));
+    this.query.match(JSON.parse(queryStr));
+    return this;
+  }
+
+  limit() {
+    if (this.queryString.limit) {
+      const count = this.queryString.limit * 1;
+      this.query.sample(count);
+    } else {
+      this.query.sample(40);
+    }
     return this;
   }
 
   sort() {
     if (this.queryString.sort) {
       const sortBy = this.queryString.sort.split(',').join(' ');
-      this.query = this.query.sort(sortBy);
+      this.query.sort(sortBy);
       // sort('price rating maxGroupSize')
     } else {
-      this.query = this.query.sort('-createdAt');
+      this.query.sort('-createdAt');
     }
     return this;
   }
 
+  // Set the
   limitFields() {
     if (this.queryString.fields) {
       const fields = this.queryString.fields.split(',').join(' ');
-      this.query = this.query.select(fields);
+      this.query.project(fields);
     } else {
-      this.query = this.query.select('-__v');
+      this.query.project('-__v');
     }
     return this;
   }
@@ -41,7 +51,7 @@ class APIFeatures {
     const limit = this.queryString.limit * 1 || 100;
     const skip = (page - 1) * limit;
     // page=3&limit=10, 1-10, page 1, 11-20, page 2, 21-30 page 3
-    this.query = this.query.skip(skip).limit(limit);
+    this.query.skip(skip).limit(limit);
     return this;
   }
 }
