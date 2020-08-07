@@ -11,6 +11,8 @@ const globalErrorHandler = require('./controllers/errorController');
 // ROUTER
 const questionRouter = require('./routes/questionRoutes');
 const userRouter = require('./routes/userRoutes');
+const videoRouter = require('./routes/videoRoutes');
+const reviewRouter = require('./routes/reviewRoutes');
 
 const app = express();
 
@@ -68,6 +70,8 @@ app.use((req, res, next) => {
 // ROUTES
 app.use('/api/v1/questions', questionRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/videos', videoRouter);
+app.use('/api/v1/reviews', reviewRouter);
 
 //ERROR HANDLER: for all unhandled routes
 app.all('*', (req, res, next) => {

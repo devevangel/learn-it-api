@@ -47,12 +47,16 @@ const userSchema = new mongoose.Schema({
       message: 'Year is either: 1, 2, 3, 4, 5'
     }
   },
+  school: String,
   role: {
     type: String,
     enum: ['user', 'tutor', 'admin'],
     default: 'user'
   },
-  passwordChangedAt: Date,
+  passwordChangedAt: {
+    type: Date,
+    default: Date.now()
+  },
   passwordResetToken: String,
   passwordResetExpires: Date,
   active: {

@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const fs = require('fs');
 const Question = require('./../../models/questionModel');
+const Video = require('./../../models/videoModel');
 
 dotenv.config({ path: './config.env' });
 
@@ -14,13 +15,11 @@ mongoose
   })
   .then(() => console.log('Connection to db established'));
 
-const questions = JSON.parse(
-  fs.readFileSync(`${__dirname}/questions-simple.json`, 'utf-8')
-);
+const videos = JSON.parse(fs.readFileSync(`${__dirname}/videos.json`, 'utf-8'));
 
 const importData = async () => {
   try {
-    await Question.create(questions);
+    await Video.create(videos);
     console.log('Data successfully loaded');
   } catch (err) {
     console.log(err);
@@ -30,7 +29,7 @@ const importData = async () => {
 
 const deleteData = async () => {
   try {
-    await Question.deleteMany();
+    await Video.deleteMany();
     console.log('Deleted successfully');
   } catch (err) {
     console.log(err);
