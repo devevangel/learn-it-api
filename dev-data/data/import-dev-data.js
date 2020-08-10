@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 const Question = require('./../../models/questionModel');
 const Video = require('./../../models/videoModel');
+const Course = require('./../../models/courseModel');
 
 dotenv.config({ path: './config.env' });
 

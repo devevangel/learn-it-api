@@ -17,8 +17,15 @@ const videoSchema = new mongoose.Schema(
     },
     level: {
       type: String,
-      enum: ['100', '200', '300', '400', '500'],
-      default: '100'
+      default: '100',
+      enum: {
+        values: ['100', '200', '300', '400', '500'],
+        message: 'Year is either: 100, 200, 300, 400, 500'
+      }
+    },
+    department: {
+      type: String,
+      trim: true
     },
     views: {
       type: Number,
@@ -37,6 +44,11 @@ const videoSchema = new mongoose.Schema(
     createdAt: {
       type: Date,
       default: Date.now()
+    },
+    active: {
+      type: Boolean,
+      default: true,
+      select: false
     }
   },
   {
@@ -47,6 +59,7 @@ const videoSchema = new mongoose.Schema(
 
 // Aggregation pipeline for get default values for each video
 videoSchema.pre('aggregate', function(next) {
+  this.match({ active: { $ne: false } });
   this.lookup({
     from: 'users',
     localField: 'user',
@@ -55,8 +68,9 @@ videoSchema.pre('aggregate', function(next) {
   })
     .unwind('tutor')
     .project(
-      'tutor.name tutor.school name thumbnail views likes dislikes course topic'
+      'tutor.name tutor.school name thumbnail views likes dislikes course topic level'
     );
+  console.log(this.pipeline());
   next();
 });
 

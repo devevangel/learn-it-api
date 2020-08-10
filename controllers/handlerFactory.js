@@ -62,10 +62,6 @@ exports.getOne = (Model, ...popOptions) =>
 
 exports.getAll = Model =>
   catchAsync(async (req, res, next) => {
-    // Allow for nested GET review on tours
-    // let filter = {};
-    // if (req.params.tourId) filter = { tour: req.params.tourId }; //Question.aggregate()
-
     //EXECUTE QUERY
     const features = new APIFeatures(Model.aggregate(), req.query)
       .course()
@@ -75,6 +71,7 @@ exports.getAll = Model =>
       .limitDoc()
       .sort()
       .paginate();
+
     const doc = await features.query;
 
     // SEND RESPONSE

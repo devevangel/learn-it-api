@@ -1,9 +1,11 @@
 const express = require('express');
 const videoController = require('./../controllers/videoContoller');
 const authController = require('./../controllers/authController');
-const reviewController = require('./../controllers/reviewController');
+const reviewRouter = require('./../routes/reviewRoutes');
 
 const router = express.Router();
+
+router.use('/:videoId/reviews', reviewRouter);
 
 router.patch(
   '/updateVideo/:id',
@@ -15,20 +17,24 @@ router.patch(
 router
   .route('/')
   .get(videoController.getVideos)
-  .post(videoController.createVideo);
+  .post(
+    authController.protect,
+    authController.restrictTo('tutor', 'admin'),
+    videoController.createVideo
+  );
 
 router
   .route('/:id')
   .get(videoController.getVideo)
-  .patch(videoController.updateVideo)
-  .delete(videoController.deleteVideo);
-
-router
-  .route('/:videoId/reviews')
-  .post(
+  .patch(
     authController.protect,
-    authController.restrictTo('user'),
-    reviewController.createReview
+    authController.restrictTo('admin'),
+    videoController.updateVideo
+  )
+  .delete(
+    authController.protect,
+    authController.restrictTo('admin', 'tutor'),
+    videoController.deleteVideo
   );
 
 module.exports = router;

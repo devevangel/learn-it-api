@@ -6,10 +6,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Calculus 1",
     "course": "MAT121",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
-    "dislikes": 20
+    "dislikes": 20,
+    "active": true
   },
   {
     "user": "5f2b5b9cf7f282008cc4bd30",
@@ -18,10 +18,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Calculus 2",
     "course": "MAT121",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
-    "dislikes": 20
+    "dislikes": 20,
+    "active": true
   },
   {
     "user": "5f2b5b9cf7f282008cc4bd30",
@@ -30,10 +30,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Basics of Algebra 1",
     "course": "MAT111",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
-    "dislikes": 20
+    "dislikes": 20,
+    "active": true
   },
   {
     "user": "5f2b5b9cf7f282008cc4bd30",
@@ -42,10 +42,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Basics of Algebra 2",
     "course": "MAT111",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
-    "dislikes": 19
+    "dislikes": 19,
+    "active": true
   },
   {
     "user": "5f2b5b9cf7f282008cc4bd30",
@@ -54,10 +54,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Intro to statistics",
     "course": "STA211",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
-    "dislikes": 19
+    "dislikes": 19,
+    "active": true
   },
   {
     "user": "5f2b5ba3f7f282008cc4bd31",
@@ -66,10 +66,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Mean, Mode, Median and Range",
     "course": "STA127",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
-    "dislikes": 19
+    "dislikes": 19,
+    "active": true
   },
   {
     "user": "5f2b5ba3f7f282008cc4bd31",
@@ -78,10 +78,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Sets, Binomial theory ...",
     "course": "Math111",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 12,
-    "dislikes": 20
+    "dislikes": 20,
+    "active": true
   },
   {
     "user": "5f2b5ba3f7f282008cc4bd31",
@@ -90,10 +90,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Paritial Fractions",
     "course": "MAT121",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 12,
-    "dislikes": 23
+    "dislikes": 23,
+    "active": true
   },
   {
     "user": "5f2b5ba3f7f282008cc4bd31",
@@ -102,10 +102,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "GST103 Q&A Review",
     "course": "GST103",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 12,
-    "dislikes": 45
+    "dislikes": 45,
+    "active": true
   },
   {
     "user": "5f2b5baff7f282008cc4bd32",
@@ -114,10 +114,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Circular Motion",
     "course": "PHY113",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 34,
-    "dislikes": 26
+    "dislikes": 26,
+    "active": true
   },
   {
     "user": "5f2b5baff7f282008cc4bd32",
@@ -126,10 +126,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Gas Laws",
     "course": "PHY126",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 45,
-    "dislikes": 25
+    "dislikes": 25,
+    "active": true
   },
   {
     "user": "5f2b5baff7f282008cc4bd32",
@@ -138,10 +138,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Hyperbola and Parabola",
     "course": "MATH121",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 60,
-    "dislikes": 35
+    "dislikes": 35,
+    "active": true
   },
   {
     "user": "5f2b5baff7f282008cc4bd32",
@@ -150,10 +150,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Matrice",
     "course": "CPT211",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 70,
-    "dislikes": 10
+    "dislikes": 10,
+    "active": true
   },
   {
     "user": "5f2b5baff7f282008cc4bd32",
@@ -162,10 +162,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "ALogrithms & Data structures",
     "course": "CPT221",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 1000,
-    "dislikes": 90
+    "dislikes": 90,
+    "active": true
   },
   {
     "user": "5f2b5baff7f282008cc4bd32",
@@ -174,10 +174,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Programming",
     "course": "CPT111",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 30000,
-    "dislikes": 1000
+    "dislikes": 10,
+    "active": true
   },
   {
     "user": "5f2b5bcff7f282008cc4bd33",
@@ -186,10 +186,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "programming",
     "course": "CPT315",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 500,
-    "dislikes": 500
+    "dislikes": 50,
+    "active": true
   },
   {
     "user": "5f2b5bcff7f282008cc4bd33",
@@ -198,10 +198,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "programming",
     "course": "CPT121",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 90,
-    "dislikes": 100
+    "dislikes": 10,
+    "active": true
   },
   {
     "user": "5f2b5bcff7f282008cc4bd33",
@@ -210,10 +210,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "programming",
     "course": "CPT112",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 400,
-    "dislikes": 10
+    "dislikes": 10,
+    "active": true
   },
   {
     "user": "5f2b5be6f7f282008cc4bd34",
@@ -222,10 +222,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "programming",
     "course": "CPT121",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 300,
-    "dislikes": 20
+    "dislikes": 20,
+    "active": true
   },
   {
     "user": "5f2b5be6f7f282008cc4bd34",
@@ -234,10 +234,10 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Site Planning",
     "course": "ARC121",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 90,
-    "dislikes": 30
+    "dislikes": 30,
+    "active": true
   },
   {
     "user": "5f2b5be6f7f282008cc4bd34",
@@ -246,9 +246,9 @@
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
     "topic": "Technical Drawing 1",
     "course": "ARC101",
-    "level": "100",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 500,
-    "dislikes": 50
+    "dislikes": 50,
+    "active": true
   }
 ]

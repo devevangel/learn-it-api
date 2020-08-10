@@ -11,6 +11,18 @@ const filterObj = (obj, ...allowedFields) => {
   return newObject;
 };
 
+exports.createVideo = catchAsync(async (req, res, next) => {
+  // Allow nested routes
+  if (!req.body.user) req.body.user = req.user.id;
+  const newVideo = await Video.create(req.body);
+  res.status(201).json({
+    status: 'success',
+    data: {
+      review: newVideo
+    }
+  });
+});
+
 exports.updateVideoInfo = catchAsync(async (req, res, next) => {
   // 1) Create error if user POSTs a password data
   if (req.body.videoURL) {
@@ -18,12 +30,7 @@ exports.updateVideoInfo = catchAsync(async (req, res, next) => {
   }
 
   // Filter out unwanted field names that are not allowed to be updated
-  const filteredBody = filterObj(
-    req.body,
-    'videoName',
-    'thumbnailURL',
-    'questions'
-  );
+  const filteredBody = filterObj(req.body, 'name', 'thumbnail', 'questions');
 
   // 2) Update video document
   const updatedVideo = await Video.findByIdAndUpdate(
@@ -43,6 +50,15 @@ exports.updateVideoInfo = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.deleteVideo = catchAsync(async (req, res, next) => {
+  await Video.findByIdAndUpdate(req.params.id, { active: false });
+
+  res.status(204).json({
+    status: 'success',
+    data: null
+  });
+});
+
 exports.getVideo = factory.getOne(
   Video,
   {
@@ -53,8 +69,5 @@ exports.getVideo = factory.getOne(
     select: 'name photo school'
   }
 );
-
 exports.getVideos = factory.getAll(Video);
-exports.createVideo = factory.createOne(Video);
-exports.deleteVideo = factory.deleteOne(Video);
 exports.updateVideo = factory.updateOne(Video);

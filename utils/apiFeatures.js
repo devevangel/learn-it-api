@@ -13,11 +13,14 @@ class APIFeatures {
       'sort',
       'random',
       'size',
-      'courses'
+      'courses',
+      'departments',
+      'fields'
     ];
     exculdedFields.forEach(el => delete queryObj[el]);
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
+    console.log(JSON.parse(queryStr));
     this.query.match(JSON.parse(queryStr));
     return this;
   }
@@ -36,6 +39,8 @@ class APIFeatures {
     if (this.queryString.size) {
       const count = this.queryString.size * 1;
       this.query.limit(count);
+    } else {
+      this.query.limit(10);
     }
     return this;
   }
@@ -69,11 +74,12 @@ class APIFeatures {
   }
 
   paginate() {
-    const page = this.queryString.page * 1 || 1;
-    const limit = this.queryString.limit * 1 || 10;
-    const skip = (page - 1) * limit;
-    // page=3&limit=10, 1-10, page 1, 11-20, page 2, 21-30 page 3
-    this.query.skip(skip).limit(limit);
+    if (this.queryString.page && this.queryString.limit) {
+      const page = this.queryString.page * 1 || 1;
+      const limit = this.queryString.limit * 1 || 10;
+      const skip = (page - 1) * limit;
+      this.query.skip(skip).limit(limit);
+    }
     return this;
   }
 }

@@ -39,12 +39,12 @@ const userSchema = new mongoose.Schema({
     minlength: [4, 'A course must have 4 characters or more'],
     maxlength: [20, 'A course must have 20 characters or less']
   },
-  year: {
+  level: {
     type: String,
-    default: '1',
+    default: '100',
     enum: {
-      values: ['1', '2', '3', '4', '5'],
-      message: 'Year is either: 1, 2, 3, 4, 5'
+      values: ['100', '200', '300', '400', '500'],
+      message: 'Year is either: 100, 200, 300, 400, 500'
     }
   },
   school: String,
@@ -76,7 +76,7 @@ userSchema.pre('save', async function(next) {
 
   // Delete passwordConfirm
   this.passwordConfirm = undefined;
-  console.log('This function runs when the password was modified or changed');
+  // console.log('This function runs when the password was modified or changed');
   next();
 });
 
@@ -84,7 +84,7 @@ userSchema.pre('save', function(next) {
   if (!this.isModified('password') || this.isNew) return next();
 
   this.passwordChangedAt = Date.now() - 1000;
-  console.log('Just added a new password changed at date');
+  // console.log('Just added a new password changed at date');
   next();
 });
 
@@ -98,7 +98,7 @@ userSchema.methods.correctPassword = async function(
   candidatePassword,
   userPassword
 ) {
-  console.log(await bcrypt.compare(candidatePassword, userPassword));
+  // console.log(await bcrypt.compare(candidatePassword, userPassword));
   return await bcrypt.compare(candidatePassword, userPassword);
 };
 
@@ -108,8 +108,8 @@ userSchema.methods.changedPasswordAfter = function(JWTTimestamp) {
       this.passwordChangedAt.getTime() / 1000,
       10
     );
-    console.log(`DB stamp: ${changedTimeStamp} JWT: ${JWTTimestamp}`);
-    console.log(JWTTimestamp < changedTimeStamp);
+    // console.log(`DB stamp: ${changedTimeStamp} JWT: ${JWTTimestamp}`);
+    // console.log(JWTTimestamp < changedTimeStamp);
     return JWTTimestamp < changedTimeStamp;
   }
 
@@ -126,7 +126,7 @@ userSchema.methods.createPasswordResetToken = function() {
     .update(resetToken)
     .digest('hex');
 
-  console.log({ resetToken }, `Crypt: ${this.passwordResetToken}`);
+  // console.log({ resetToken }, `Crypt: ${this.passwordResetToken}`);
 
   this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
 

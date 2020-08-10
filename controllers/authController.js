@@ -18,22 +18,12 @@ const signRefreshToken = id => {
   });
 };
 
-const createSendToken = (user, statusCode, res) => {
+const createUserSendToken = (user, statusCode, res) => {
   const token = signToken(user._id);
 
-  // Cookie options
-  const cookieOptions = {
-    expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
-    ),
-    httpOnly: true
-  };
-
-  if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
-
-  res.cookie('jwt', token, cookieOptions);
-
   user.password = undefined;
+  user.passwordChangedAt = undefined;
+  user.active = undefined;
 
   res.status(statusCode).json({
     status: 'success',
@@ -45,17 +35,32 @@ const createSendToken = (user, statusCode, res) => {
 };
 
 exports.signup = catchAsync(async (req, res, next) => {
-  // 1) Create user from request body
-  const newUser = await User.create({
+  // 1) Check if user is signing up as an admin and validate
+
+  const signupBody = {
     name: req.body.name,
     email: req.body.email,
     password: req.body.password,
     passwordConfirm: req.body.passwordConfirm,
-    school: req.body.school
-  });
+    school: req.body.school,
+    level: req.body.level,
+    course: req.body.course,
+    role: req.body.role
+  };
 
-  // 2) Log user in
-  createSendToken(newUser, 201, res);
+  // Check if signup body role === admin
+  if (
+    signupBody.role === 'admin' &&
+    req.body.adminKey !== process.env.ADMIN_SIGNUP_KEY
+  ) {
+    signupBody.role = 'user';
+  }
+
+  // 2) Create user from request body
+  const newUser = await User.create(signupBody);
+
+  // 3) Log user in
+  createUserSendToken(newUser, 201, res);
 });
 
 exports.login = catchAsync(async (req, res, next) => {
@@ -74,7 +79,7 @@ exports.login = catchAsync(async (req, res, next) => {
   }
 
   // 3) If everything is okay send token to client
-  createSendToken(user, 200, res);
+  createUserSendToken(user, 200, res);
 });
 
 exports.protect = catchAsync(async (req, res, next) => {
@@ -200,7 +205,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   // 3) Update changedPasswordAt property for the user
 
   //4) Log user in, send jwt
-  createSendToken(user, 200, res);
+  createUserSendToken(user, 200, res);
 });
 
 exports.updatePassword = catchAsync(async (req, res, next) => {

@@ -11,6 +11,11 @@ const filterObj = (obj, ...allowedFields) => {
   return newObject;
 };
 
+exports.getMe = (req, res, next) => {
+  req.params.id = req.user.id;
+  next();
+};
+
 exports.updateMe = catchAsync(async (req, res, next) => {
   // 1) Create error if user POSTs a password data
   if (req.body.password || req.body.passwordConfirm) {
@@ -23,7 +28,14 @@ exports.updateMe = catchAsync(async (req, res, next) => {
   }
 
   // Filtered out unwanted field names that are not allowed to be updated
-  const filteredBody = filterObj(req.body, 'name', 'email');
+  const filteredBody = filterObj(
+    req.body,
+    'name',
+    'email',
+    'school',
+    'level',
+    'course'
+  );
 
   // 2) Update user document
   const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
@@ -57,5 +69,6 @@ exports.createUser = (req, res) => {
 
 exports.getAllUsers = factory.getAll(User);
 exports.getUser = factory.getOne(User);
+// do NOT update password with this
 exports.updateUser = factory.updateOne(User);
 exports.deleteUser = factory.deleteOne(User);

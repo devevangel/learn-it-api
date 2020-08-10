@@ -28,7 +28,7 @@ const questionSchema = new mongoose.Schema({
       message: 'Year is either: 100, 200, 300, 400, 500'
     }
   },
-  subject: {
+  course: {
     type: String,
     trim: true,
     lowercase: true,
