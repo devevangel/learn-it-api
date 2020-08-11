@@ -1,11 +1,22 @@
 const express = require('express');
-const videoController = require('./../controllers/videoContoller');
-const authController = require('./../controllers/authController');
-const reviewRouter = require('./../routes/reviewRoutes');
+const videoController = require('../controllers/videoContoller');
+const authController = require('../controllers/authController');
+const reviewRouter = require('./reviewRoutes');
+const fixUpQuery = require('./../utils/queryFix');
 
 const router = express.Router();
 
 router.use('/:videoId/reviews', reviewRouter);
+router.use((req, res, next) => {
+  console.log(req.query);
+  req.query.views = fixUpQuery(req.query.views);
+  req.query.ratingsAverage = fixUpQuery(req.query.ratingsAverage);
+  req.query.ratingsQuantity = fixUpQuery(req.query.ratingsQuantity);
+  req.query.level = fixUpQuery(req.query.level);
+  req.query.likes = fixUpQuery(req.query.likes);
+  req.query.dislikes = fixUpQuery(req.query.dislikes);
+  next();
+});
 
 router.patch(
   '/updateVideo/:id',

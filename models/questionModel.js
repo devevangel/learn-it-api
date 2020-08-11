@@ -21,11 +21,16 @@ const questionSchema = new mongoose.Schema({
   },
   answerImage: String,
   level: {
-    type: String,
-    default: '100',
-    enum: {
-      values: ['100', '200', '300', '400', '500'],
-      message: 'Year is either: 100, 200, 300, 400, 500'
+    type: Number,
+    default: 100,
+    validate: {
+      // This only runs on create and save
+      validator: function(el) {
+        const levels = [100, 200, 300, 400, 500];
+
+        return levels.includes(el);
+      },
+      message: 'Level can either 100, 200, 300, 400, or 500'
     }
   },
   course: {
@@ -58,6 +63,7 @@ const questionSchema = new mongoose.Schema({
     select: false
   }
 });
+
 
 const Question = mongoose.model('Question', questionSchema);
 

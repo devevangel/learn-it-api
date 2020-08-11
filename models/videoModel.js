@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const videoSchema = new mongoose.Schema(
   {
-    user: {
+    tutorID: {
       type: mongoose.Schema.ObjectId,
       ref: 'User',
       required: [true, 'Video must belong to a tutor.']
@@ -16,16 +16,22 @@ const videoSchema = new mongoose.Schema(
       lowercase: true
     },
     level: {
-      type: String,
-      default: '100',
-      enum: {
-        values: ['100', '200', '300', '400', '500'],
-        message: 'Year is either: 100, 200, 300, 400, 500'
+      type: Number,
+      default: 100,
+      validate: {
+        // This only runs on create and save
+        validator: function(el) {
+          const levels = [100, 200, 300, 400, 500];
+
+          return levels.includes(el);
+        },
+        message: 'Level can either 100, 200, 300, 400, or 500'
       }
     },
-    department: {
-      type: String,
-      trim: true
+    departments: {
+      type: [String],
+      trim: true,
+      lowercase: true
     },
     views: {
       type: Number,
@@ -36,6 +42,16 @@ const videoSchema = new mongoose.Schema(
       default: 0
     },
     dislikes: {
+      type: Number,
+      default: 0
+    },
+    ratingsAverage: {
+      type: Number,
+      default: 4.5,
+      min: [1, 'Rating must be above 1.0'],
+      max: [5.0, 'Rating must be below 5.0']
+    },
+    ratingsQuantity: {
       type: Number,
       default: 0
     },
@@ -57,18 +73,20 @@ const videoSchema = new mongoose.Schema(
   }
 );
 
+videoSchema.index({ ratingsAverage: 1 });
+
 // Aggregation pipeline for get default values for each video
 videoSchema.pre('aggregate', function(next) {
   this.match({ active: { $ne: false } });
   this.lookup({
     from: 'users',
-    localField: 'user',
+    localField: 'tutorID',
     foreignField: '_id',
     as: 'tutor'
   })
     .unwind('tutor')
     .project(
-      'tutor.name tutor.school name thumbnail views likes dislikes course topic level'
+      'tutor.name tutor.school name thumbnail views likes dislikes course topic level ratingsAverage ratingsQuantity'
     );
   console.log(this.pipeline());
   next();

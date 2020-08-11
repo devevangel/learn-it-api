@@ -1,6 +1,7 @@
 [
   {
-    "user": "5f2b5b9cf7f282008cc4bd30",
+    "_id": "5c88fa8cf4afda39709c2955",
+    "tutorID": "5c8a1f292f8fb814b56fa184",
     "name": "Understanding Calculus 1",
     "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
@@ -8,11 +9,16 @@
     "course": "MAT121",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
+    "views": 100,
     "dislikes": 20,
-    "active": true
+    "active": true,
+    "ratingsAverage": 4.4,
+    "ratingsQuantity": 7,
+    "departments": ["#ComputerScience", "#ChemicalEngineering", "#Mechatronics"]
   },
   {
-    "user": "5f2b5b9cf7f282008cc4bd30",
+    "_id": "5c88fa8cf4afda39709c2951",
+    "tutorID": "5c8a1f4e2f8fb814b56fa185",
     "name": "Understanding Calculus 2",
     "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
@@ -20,11 +26,16 @@
     "course": "MAT121",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
+    "views": 67,
     "dislikes": 20,
-    "active": true
+    "active": true,
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 7,
+    "departments": ["#ComputerScience", "#ChemicalEngineering", "#Mechatronics"]
   },
   {
-    "user": "5f2b5b9cf7f282008cc4bd30",
+    "_id": "5c88fa8cf4afda39709c295a",
+    "tutorID": "5c8a201e2f8fb814b56fa186",
     "name": "Basics of Algebra 1",
     "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
@@ -32,11 +43,16 @@
     "course": "MAT111",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
+    "views": 200,
     "dislikes": 20,
-    "active": true
+    "active": true,
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "departments": ["#ComputerScience", "#ChemicalEngineering", "#Mechatronics"]
   },
   {
-    "user": "5f2b5b9cf7f282008cc4bd30",
+    "_id": "5c88fa8cf4afda39709c2961",
+    "tutorID": "5c8a23412f8fb814b56fa18c",
     "name": "Basics of Algebra 2",
     "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
@@ -44,11 +60,16 @@
     "course": "MAT111",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
+    "views": 20,
     "dislikes": 19,
-    "active": true
+    "active": true,
+    "ratingsAverage": 3.9,
+    "ratingsQuantity": 7,
+    "departments": ["#ComputerScience", "#ChemicalEngineering", "#Mechatronics"]
   },
   {
-    "user": "5f2b5b9cf7f282008cc4bd30",
+    "_id": "5c88fa8cf4afda39709c295d",
+    "tutorID": "5c8a1f292f8fb814b56fa184",
     "name": "Statistics 211 intro",
     "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/1919/04/Marketing-Thumbnail-v1.jpg",
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
@@ -56,11 +77,20 @@
     "course": "STA211",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
+    "views": 300,
     "dislikes": 19,
-    "active": true
+    "active": true,
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 5,
+    "departments": [
+      "#Mathematics",
+      "#ComputerEngineering",
+      "#MechinalEngineering"
+    ]
   },
   {
-    "user": "5f2b5ba3f7f282008cc4bd31",
+    "_id": "5c88fa8cf4afda39709c2966",
+    "tutorID": "5c8a1f4e2f8fb814b56fa185",
     "name": "Statistics 127 Mean, Mode, Median and Range",
     "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/1919/04/Marketing-Thumbnail-v1.jpg",
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
@@ -68,11 +98,20 @@
     "course": "STA127",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 55,
+    "views": 800,
     "dislikes": 19,
-    "active": true
+    "active": true,
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 7,
+    "departments": [
+      "#Mathematics",
+      "#ComputerEngineering",
+      "#MechinalEngineering"
+    ]
   },
   {
-    "user": "5f2b5ba3f7f282008cc4bd31",
+    "_id": "5c88fa8cf4afda39709c2970",
+    "tutorID": "5c8a201e2f8fb814b56fa186",
     "name": "Math111 Sets, Binomial theory ...",
     "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/1919/04/Marketing-Thumbnail-v1.jpg",
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
@@ -80,11 +119,20 @@
     "course": "Math111",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 12,
+    "views": 1000,
     "dislikes": 20,
-    "active": true
+    "active": true,
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 6,
+    "departments": [
+      "#Mathematics",
+      "#ComputerEngineering",
+      "#MechinalEngineering"
+    ]
   },
   {
-    "user": "5f2b5ba3f7f282008cc4bd31",
+    "_id": "5c88fa8cf4afda39709c2974",
+    "tutorID": "5c8a23412f8fb814b56fa18c",
     "name": "Paritial Fractions Advanced course",
     "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
@@ -92,11 +140,20 @@
     "course": "MAT121",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 12,
+    "views": 20,
     "dislikes": 23,
-    "active": true
+    "active": true,
+    "ratingsAverage": 5,
+    "ratingsQuantity": 9,
+    "departments": [
+      "#Mathematics",
+      "#ComputerEngineering",
+      "#MechinalEngineering"
+    ]
   },
   {
-    "user": "5f2b5ba3f7f282008cc4bd31",
+    "_id": "5c88fa8cf4afda39709c296c",
+    "tutorID": "5c8a1f292f8fb814b56fa184",
     "name": "GST103 Q&A Review",
     "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
     "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
@@ -104,151 +161,15 @@
     "course": "GST103",
     "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
     "likes": 12,
+    "views": 1500,
     "dislikes": 45,
-    "active": true
-  },
-  {
-    "user": "5f2b5baff7f282008cc4bd32",
-    "name": "PHY113 Circular Motion",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "Circular Motion",
-    "course": "PHY113",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 34,
-    "dislikes": 26,
-    "active": true
-  },
-  {
-    "user": "5f2b5baff7f282008cc4bd32",
-    "name": "PHY126 Projectiles",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "Gas Laws",
-    "course": "PHY126",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 45,
-    "dislikes": 25,
-    "active": true
-  },
-  {
-    "user": "5f2b5baff7f282008cc4bd32",
-    "name": "MATH121 Hyperbola and Parabola",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "Hyperbola and Parabola",
-    "course": "MATH121",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 60,
-    "dislikes": 35,
-    "active": true
-  },
-  {
-    "user": "5f2b5baff7f282008cc4bd32",
-    "name": "CPT211 Advanced Matrice problems",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "Matrice",
-    "course": "CPT211",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 70,
-    "dislikes": 10,
-    "active": true
-  },
-  {
-    "user": "5f2b5baff7f282008cc4bd32",
-    "name": "CPT221 ALogrithms and Data structures",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "ALogrithms & Data structures",
-    "course": "CPT221",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 1000,
-    "dislikes": 90,
-    "active": true
-  },
-  {
-    "user": "5f2b5baff7f282008cc4bd32",
-    "name": "Python for beginners",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "Programming",
-    "course": "CPT111",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 30000,
-    "dislikes": 10,
-    "active": true
-  },
-  {
-    "user": "5f2b5bcff7f282008cc4bd33",
-    "name": "C++ for beginners.",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "programming",
-    "course": "CPT315",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 500,
-    "dislikes": 50,
-    "active": true
-  },
-  {
-    "user": "5f2b5bcff7f282008cc4bd33",
-    "name": "JavaScript for noobies",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "programming",
-    "course": "CPT121",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 90,
-    "dislikes": 10,
-    "active": true
-  },
-  {
-    "user": "5f2b5bcff7f282008cc4bd33",
-    "name": "Advanced c++ programming",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "programming",
-    "course": "CPT112",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 400,
-    "dislikes": 10,
-    "active": true
-  },
-  {
-    "user": "5f2b5be6f7f282008cc4bd34",
-    "name": "CPT121 Nodejs for JS Developers",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "programming",
-    "course": "CPT121",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 300,
-    "dislikes": 20,
-    "active": true
-  },
-  {
-    "user": "5f2b5be6f7f282008cc4bd34",
-    "name": "ARC121 Site Planning",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "Site Planning",
-    "course": "ARC121",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 90,
-    "dislikes": 30,
-    "active": true
-  },
-  {
-    "user": "5f2b5be6f7f282008cc4bd34",
-    "name": "ARC101 Technical Drawing 1",
-    "thumbnail": "https://34ncok1g6e3h1fgw3l3w0xg2-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Marketing-Thumbnail-v1.jpg",
-    "video": "https://www.youtube.com/watch?v=5ihzgdrvErQ",
-    "topic": "Technical Drawing 1",
-    "course": "ARC101",
-    "description": "Aenean in dui elit. In facilisis enim arcu, vitae blandit erat tincidunt sit amet. Mauris leo justo, efficitur sed diam eu, efficitur sagittis ligula. Fusce enim sapien, consectetur sed velit ac, finibus condimentum lorem. Cras in mauris justo. Nunc sit amet aliquam sapien. Curabitur sodales justo nec vestibulum lacinia.",
-    "likes": 500,
-    "dislikes": 50,
-    "active": true
+    "active": true,
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "departments": [
+      "#Mathematics",
+      "#ComputerEngineering",
+      "#MechinalEngineering"
+    ]
   }
 ]

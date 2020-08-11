@@ -1,96 +1,86 @@
 [
   {
-    "id": 0,
     "question": "Solve the following equation: x (x + 5) = x^2 - 15",
     "options": ["3", "-2", "4", "-3"],
     "answer": "x = -3",
-    "level": "100",
+    "level": 100,
     "course": "Mathematics",
     "topic": "Quadratic Equation",
     "explanation": "Quisque finibus vitae ipsum eu laoreet. Pellentesque at eros at erat mattis vulputate vel id dolor. Nullam et purus luctus, accumsan metus accumsan, mollis sapien. Sed volutpat porta interdum. In mollis nec lectus non tincidunt. Nam ultrices erat ut pellentesque sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat est nec lorem pharetra, ut dignissim nibh scelerisque. Nullam facilisis justo ex, et molestie risus rutrum in. Ut pulvinar dapibus nulla eu euismod."
   },
   {
-    "id": 1,
     "question": "Which is greater than 4?",
     "options": ["5", "-5", "-1/2", "-25"],
     "answer": "5",
-    "level": "100",
+    "level": 100,
     "course": "Mathematics",
     "topic": "Inequality",
     "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
-    "id": 2,
     "question": "Which is the smallest?",
     "options": ["-1", "-1/2", "0", "3"],
     "answer": "-1",
-    "level": "100",
+    "level": 100,
     "course": "Mathematics",
     "topic": "Inequality",
     "explanation": "Quisque mi urna, auctor ut rhoncus id, malesuada sed risus. Fusce suscipit quis mauris nec pretium. Pellentesque sollicitudin orci non tortor dignissim, in lacinia magna consequat. Cras pharetra a risus tristique sollicitudin. Mauris molestie blandit leo, at vestibulum lorem viverra sit amet. Sed velit lacus, porta non fringilla eu, viverra eget enim. Vivamus sollicitudin leo tellus, in condimentum arcu iaculis ac. Pellentesque vel venenatis lacus, vel suscipit metus. Phasellus pellentesque arcu ex, id euismod enim feugiat quis. Duis facilisis laoreet purus et ullamcorper. Ut semper nibh vitae est interdum volutpat"
   },
   {
-    "id": 3,
     "question": "Evaluate the expression: 27 ÷ 32 + 4 · 2 – 1",
     "options": ["5 + 5", "-15", "-10", "4"],
     "answer": "5 + 5",
-    "level": "100",
+    "level": 100,
     "course": "Mathematics",
     "topic": "Algebra",
     "explanation": "Quisque arcu tortor, dignissim vitae egestas eu, tempor quis diam. Fusce fermentum eu tortor in pretium. Sed nisl est, auctor sed elementum et, interdum id tellus. Nullam quam justo, cursus sit amet viverra vitae, rhoncus in est. Quisque lobortis, urna in dictum imperdiet, ex massa auctor augue, pellentesque fermentum nisi nisi quis ipsum. Maecenas viverra dignissim hendrerit. Etiam dictum consequat ligula at congue. Sed lobortis at tellus ac gravida. Proin posuere ut enim vitae eleifend. Nullam eleifend mauris elit, et sollicitudin tortor rhoncus a. Pellentesque hendrerit laoreet mauris. Donec tristique tempor metus vel mattis"
   },
   {
-    "id": 4,
     "question": "Evaluate the expression: 4[(24 ÷ 3) - (3 + 2)]",
     "options": ["-12", "6", "12", "-6"],
     "answer": "12",
-    "level": "500",
+    "level": 500,
     "course": "Mathematics",
     "topic": "Algebra",
     "explanation": "Nulla vel lectus tristique, bibendum felis ut, cursus ex. In laoreet rutrum metus sit amet faucibus. Nunc congue, leo eget sodales facilisis, eros sapien condimentum mi, vel sollicitudin dui ligula rutrum lacus. Donec in arcu eget mi interdum pulvinar sit amet quis dui. Sed rutrum vitae risus eget tincidunt. Integer vitae mattis quam, at gravida ligula. Proin eu porttitor erat."
   },
   {
-    "id": 5,
     "question": "The value of x + x(x^x) when x = 2 is:",
     "options": ["10", "16", "18", "36", "64"],
     "answer": "10",
-    "level": "100",
+    "level": 100,
     "course": "Mathematics",
     "topic": "Algebra",
     "explanation": "Donec vel rutrum elit. Suspendisse vel consequat est, nec iaculis ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Fusce non nisl non metus suscipit consequat sed non enim. Vestibulum bibendum nibh sapien, vel varius lorem molestie sed. Fusce eu commodo justo. Morbi lorem metus, volutpat at ultrices sed, pulvinar at turpis. Ut sed aliquam tortor. Praesent placerat sit amet arcu vel pretium"
   },
   {
-    "id": 6,
     "question": "If (0.2)^x = 2 and log 2 = 0.3010, then the value of x to the nearest tenth is:",
     "options": ["10.0", "-0.5", "-0.4", "-0.2", "10.0"],
     "answer": "-0.4",
-    "level": "200",
+    "level": 200,
     "course": "Mathematics",
     "topic": "Logarithm",
     "explanation": "Phasellus tincidunt nibh ac dolor vehicula, a accumsan tortor efficitur. Quisque eget diam sit amet enim ultrices rutrum. Praesent quis ex ac est ornare blandit. Cras luctus justo eu feugiat fringilla. Cras a tortor vitae sem cursus sollicitudin quis at nibh. Fusce nulla neque, pellentesque in lacus in, varius tempus dui. Duis dignissim, velit ac convallis ultricies, libero est volutpat ex, et lobortis ligula ligula vitae dui. Ut at dui id eros mollis aliquet."
   },
   {
-    "id": 7,
     "question": "If 10^2y = 25, then 10^-y equals:",
     "options": ["-1/5", "1/625", "1/50", "1/25", "1/5"],
     "answer": "1/5",
-    "level": "200",
+    "level": 200,
     "course": "Mathematics",
     "topic": "Algebra in indices",
     "explanation": "Integer vitae mauris at tortor luctus tincidunt. Fusce aliquet massa sed sapien tristique dapibus. Fusce vitae arcu dictum, gravida lectus vel, porttitor orci. Ut lobortis iaculis sapien eu porttitor. Phasellus in efficitur ligula. Fusce ullamcorper facilisis maximus. Suspendisse vel semper tortor, et blandit ligula. Nulla vel molestie massa."
   },
   {
-    "id": 8,
     "question": "The sum of three numbers is 98. The ratio of the first to the second is 2/3, and the ratio of the second to the third is 5/8. The second number is:",
     "options": ["15", "20", "30", "32", "33"],
     "answer": "30",
-    "level": "400",
+    "level": 400,
     "course": "Mathematics",
     "topic": "Simultatineous Equation",
     "explanation": "Sed nec pulvinar sapien, quis bibendum sapien. Nullam nisl nulla, sodales eget commodo non, imperdiet in turpis. Nam sagittis placerat arcu, eu dapibus tellus gravida in. Proin semper sed velit nec bibendum. Nullam ut ante aliquam, pharetra est a, venenatis lorem. Aliquam euismod, tellus eget bibendum finibus, eros lectus laoreet sem, eu vehicula nisl tortor at felis. Mauris porta ex a sapien porttitor convallis."
   },
   {
-    "id": 9,
     "question": "Solve the quadratic equation x^2 + (4 – 3y)x – 12y = 0.",
     "options": [
       "x = 4 or x = -3y",
@@ -99,7 +89,7 @@
       "x = 1 or x = -3y"
     ],
     "answer": "x = -4 or x = 3y",
-    "level": "500",
+    "level": 500,
     "course": "Mathematics",
     "topic": "Quadratic Equation",
     "explanation": "Proin vel tellus pharetra, sollicitudin eros quis, tempus metus. Vestibulum varius magna a faucibus vehicula. Cras cursus enim sed odio pretium imperdiet. Proin a enim consectetur, vehicula felis a, varius metus. Nullam et est eget quam fermentum porttitor. Pellentesque iaculis nibh in quam commodo rutrum. Aliquam dignissim ac sem in gravida."

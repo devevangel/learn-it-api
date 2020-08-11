@@ -1,8 +1,14 @@
 const express = require('express');
 const questionController = require('./../controllers/questionController');
 const authController = require('../controllers/authController');
+const fixUpQuery = require('./../utils/queryFix');
 
 const router = express.Router();
+
+router.use((req, res, next) => {
+  req.query.level = fixUpQuery(req.query.level);
+  next();
+});
 
 router
   .route('/')

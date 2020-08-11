@@ -20,7 +20,7 @@ class APIFeatures {
     exculdedFields.forEach(el => delete queryObj[el]);
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
-    console.log(JSON.parse(queryStr));
+
     this.query.match(JSON.parse(queryStr));
     return this;
   }
@@ -69,6 +69,14 @@ class APIFeatures {
     if (this.queryString.courses) {
       const courses = this.queryString.courses.split(',');
       this.query.match({ course: { $in: courses } });
+    }
+    return this;
+  }
+
+  department() {
+    if (this.queryString.departments) {
+      const departments = this.queryString.departments.split(',');
+      this.query.match({ departments: { $in: departments } });
     }
     return this;
   }

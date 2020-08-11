@@ -65,6 +65,7 @@ exports.getAll = Model =>
     //EXECUTE QUERY
     const features = new APIFeatures(Model.aggregate(), req.query)
       .course()
+      .department()
       .filter()
       .limitFields()
       .randomDoc()

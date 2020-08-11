@@ -40,11 +40,16 @@ const userSchema = new mongoose.Schema({
     maxlength: [20, 'A course must have 20 characters or less']
   },
   level: {
-    type: String,
-    default: '100',
-    enum: {
-      values: ['100', '200', '300', '400', '500'],
-      message: 'Year is either: 100, 200, 300, 400, 500'
+    type: Number,
+    default: 100,
+    validate: {
+      // This only runs on create and save
+      validator: function(el) {
+        const levels = [100, 200, 300, 400, 500];
+
+        return levels.includes(el);
+      },
+      message: 'Level can either 100, 200, 300, 400, or 500'
     }
   },
   school: String,
@@ -67,26 +72,26 @@ const userSchema = new mongoose.Schema({
 });
 
 // Middlewares
-userSchema.pre('save', async function(next) {
-  // only run this function if password was modified
-  if (!this.isModified('password')) return next();
+// userSchema.pre('save', async function(next) {
+//   // only run this function if password was modified
+//   if (!this.isModified('password')) return next();
 
-  // Hash pasword with cost of 12
-  this.password = await bcrypt.hash(this.password, 12);
+//   // Hash pasword with cost of 12
+//   this.password = await bcrypt.hash(this.password, 12);
 
-  // Delete passwordConfirm
-  this.passwordConfirm = undefined;
-  // console.log('This function runs when the password was modified or changed');
-  next();
-});
+//   // Delete passwordConfirm
+//   this.passwordConfirm = undefined;
+//   // console.log('This function runs when the password was modified or changed');
+//   next();
+// });
 
-userSchema.pre('save', function(next) {
-  if (!this.isModified('password') || this.isNew) return next();
+// userSchema.pre('save', function(next) {
+//   if (!this.isModified('password') || this.isNew) return next();
 
-  this.passwordChangedAt = Date.now() - 1000;
-  // console.log('Just added a new password changed at date');
-  next();
-});
+//   this.passwordChangedAt = Date.now() - 1000;
+//   // console.log('Just added a new password changed at date');
+//   next();
+// });
 
 userSchema.pre(/^find/, function(next) {
   // this points to the current ^find query object

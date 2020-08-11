@@ -65,7 +65,7 @@ exports.getVideo = factory.getOne(
     path: 'reviews'
   },
   {
-    path: 'user',
+    path: 'tutorID',
     select: 'name photo school'
   }
 );
