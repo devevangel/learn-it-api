@@ -12,8 +12,8 @@ const filterObj = (obj, ...allowedFields) => {
 };
 
 exports.createVideo = catchAsync(async (req, res, next) => {
-  // Allow nested routes
-  if (!req.body.user) req.body.user = req.user.id;
+  // creates new video content with current tutorID and 
+  if (!req.body.tutorID) req.body.tutorID = req.user.id;
   const newVideo = await Video.create(req.body);
   res.status(201).json({
     status: 'success',

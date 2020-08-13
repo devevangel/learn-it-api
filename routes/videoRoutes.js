@@ -8,7 +8,6 @@ const router = express.Router();
 
 router.use('/:videoId/reviews', reviewRouter);
 router.use((req, res, next) => {
-  console.log(req.query);
   req.query.views = fixUpQuery(req.query.views);
   req.query.ratingsAverage = fixUpQuery(req.query.ratingsAverage);
   req.query.ratingsQuantity = fixUpQuery(req.query.ratingsQuantity);

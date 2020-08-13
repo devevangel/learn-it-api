@@ -1,7 +1,6 @@
 const express = require('express');
 const userController = require('./../controllers/userController');
 const authController = require('./../controllers/authController');
-const videoContoller = require('./../controllers/videoContoller');
 
 //Router
 const router = express.Router();
@@ -18,8 +17,13 @@ router.use(authController.protect);
 router.patch('/updateMyPassword', authController.updatePassword);
 
 router.get('/me', userController.getMe, userController.getUser);
-router.patch('/updateMe', authController.protect, userController.updateMe);
-router.delete('/deleteMe', authController.protect, userController.deleteMe);
+router.patch(
+  '/updateMe',
+  userController.uploadUserPhoto,
+  userController.resizeUserPhoto,
+  userController.updateMe
+);
+router.delete('/deleteMe', userController.deleteMe);
 
 router.use(authController.restrictTo('admin'));
 

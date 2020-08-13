@@ -1,3 +1,4 @@
+// enables query for numeric values
 module.exports = queryParam => {
   if (queryParam) {
     if (typeof queryParam === 'object') {

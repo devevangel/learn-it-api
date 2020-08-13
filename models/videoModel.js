@@ -49,7 +49,8 @@ const videoSchema = new mongoose.Schema(
       type: Number,
       default: 4.5,
       min: [1, 'Rating must be above 1.0'],
-      max: [5.0, 'Rating must be below 5.0']
+      max: [5.0, 'Rating must be below 5.0'],
+      set: val => Math.round(val * 10) / 10
     },
     ratingsQuantity: {
       type: Number,
@@ -88,7 +89,6 @@ videoSchema.pre('aggregate', function(next) {
     .project(
       'tutor.name tutor.school name thumbnail views likes dislikes course topic level ratingsAverage ratingsQuantity'
     );
-  console.log(this.pipeline());
   next();
 });
 
